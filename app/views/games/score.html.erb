@@ -1,0 +1,12 @@
+<h1>Games Score</h1>
+<p><%=@result%></p>
+
+<%if @check1 == false%>
+  <p>Sorry but <strong><%= @word1.upcase %></strong> can't be built out of <%= @word2.upcase.chars.join(', ') %>...</p>
+<%elsif @check2 == false%>
+  <p>Sorry but <strong><%= @word1.upcase %></strong> is not an English word...</p>
+<%else%>
+  <p>Congrats! <strong><%= @word1.upcase %></strong> is a valid English word!!</p>
+<%end%>
+
+<%= link_to "Play again", root_path %>
