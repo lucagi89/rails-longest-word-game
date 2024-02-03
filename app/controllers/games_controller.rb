@@ -1,4 +1,3 @@
-require "json"
 require "open-uri"
 
 class GamesController < ApplicationController
@@ -8,7 +7,6 @@ class GamesController < ApplicationController
     10.times do
       @letters << range.sample
     end
-
   end
 
   def score
